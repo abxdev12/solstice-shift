@@ -1,9 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ♟️ Solstice Shift - AI-Powered Chess Engine
 
-## Getting Started
+An intelligent chess game powered by AI, built with Next.js and modern web technologies. Play against a sophisticated AI opponent with adaptive difficulty levels.
 
-First, run the development server:
+## 📋 Table of Contents
 
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Getting Started](#-getting-started)
+- [How to Play](#-how-to-play)
+- [Development](#-development)
+- [Deployment](#-deployment)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+## ✨ Features
+
+- 🤖 **AI Chess Engine** - Intelligent opponent with strategic gameplay
+- 🎮 **Interactive Board** - Beautiful, responsive chess interface
+- 📊 **Game Analysis** - Track moves and game statistics
+- ⚙️ **Difficulty Levels** - Adjust AI challenge to your skill level
+- 🌐 **Responsive Design** - Play on desktop, tablet, or mobile
+- ⚡ **Real-time Updates** - Instant move feedback and animations
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js (React), JavaScript
+- **Styling**: CSS
+- **Chess Logic**: AI-powered engine
+- **Deployment**: Vercel-ready
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 16+ or later
+- npm, yarn, pnpm, or bun package manager
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/abxdev12/solstice-shift.git
+cd solstice-shift
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
@@ -14,23 +66,72 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to start playing.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The application auto-reloads as you edit files, making development seamless.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎮 How to Play
 
-## Learn More
+1. **Start Game** - Click "New Game" to begin a match
+2. **Make Moves** - Click on pieces to select and drag to move (or click destination square)
+3. **AI Response** - The AI will automatically respond to your moves
+4. **Win Conditions** - Checkmate your opponent or achieve stalemate
+5. **Adjust Difficulty** - Change AI skill level in the settings menu
 
-To learn more about Next.js, take a look at the following resources:
+## 🔧 Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+├── app/
+│   ├── page.js          # Main chess game page
+│   └── layout.js        # Layout configuration
+├── public/              # Static assets
+├── styles/              # CSS styles
+└── package.json         # Dependencies
+```
 
-## Deploy on Vercel
+### Available Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint (if configured)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Making Changes
+
+Edit `app/page.js` to modify the main game interface. The Next.js app router will automatically reflect your changes.
+
+## 📦 Deployment
+
+The easiest way to deploy your application is with the **[Vercel Platform](https://vercel.com)**:
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Vercel automatically deploys on every push to main
+
+For detailed deployment instructions, see the [Next.js Deployment Documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how to help:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is open source. See the LICENSE file for details.
+
+## 📚 Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API
+- [Learn Next.js](https://nextjs.org/learn) - Interactive Next.js tutorial
+- [Chess Rules](https://www.chess.com/terms/chess-rules) - Standard chess rules reference
+
+---
+
+**Happy Playing! ♟️**
