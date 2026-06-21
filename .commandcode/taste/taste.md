@@ -5,9 +5,11 @@
 # AI
 - Use gemini-3.1-flash-lite model for Gemini API calls. Confidence: 0.75
 - Chess engine AI should calculate moves within 3-4 seconds while maintaining professional-level play quality. Confidence: 0.70
+- Chess commentary analysis should be in simple, humanized, easy-to-understand language limited to two sentences. Confidence: 0.70
 
 # Chess
 - Use ELO-style difficulty tier labels with approximate ratings: Beginner (1500+), Intermediate (2000+), Advanced (2300+), Expert (2800+). Confidence: 0.80
+- Display move history inline with user moves in white and AI moves in red, separated by a comma or small space (no table with column headers, no row/serial numbers). Confidence: 0.75
 
 # Layout
 - Keep the Play tab minimal and scroll-free — avoid side panels like move history and AI analysis in the main game layout. Confidence: 0.70

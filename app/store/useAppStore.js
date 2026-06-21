@@ -12,6 +12,7 @@ const useAppStore = create((set, get) => ({
   // --- Persistent game state (survives tab switches) ---
   savedFen: '',
   savedLastMove: null,
+  savedHistory: [],
 
   // --- Actions ---
   setApiKey: (key) =>
@@ -20,9 +21,10 @@ const useAppStore = create((set, get) => ({
       isPlayLocked: !key || key.length === 0,
     }),
 
-  saveGame: (fen, lastMove) => set({ savedFen: fen, savedLastMove: lastMove }),
+  saveGame: (fen, lastMove, history) =>
+    set({ savedFen: fen, savedLastMove: lastMove, savedHistory: history }),
 
-  clearSavedGame: () => set({ savedFen: '', savedLastMove: null }),
+  clearSavedGame: () => set({ savedFen: '', savedLastMove: null, savedHistory: [] }),
 }));
 
 export default useAppStore;

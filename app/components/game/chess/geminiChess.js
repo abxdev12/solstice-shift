@@ -9,12 +9,12 @@ const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/
  * @returns {Promise<string>}
  */
 export async function getChessCommentary(apiKey, fen, lastMove) {
-  const prompt = `You are a chess commentator analysing a game between a human and an AI engine rated 2800+.
+  const prompt = `You are a friendly chess coach. Look at this chess position.
 
 Current position (FEN): ${fen}
 Last move: ${lastMove}
 
-Give 1-2 sentences of strategic analysis of that last move. Mention if it was aggressive, defensive, tactical, or positional. Compare the human's play style to the engine's response. Keep it concise and insightful.`;
+Explain that last move in simple everyday language — just 2 sentences. Say what it does and whether it's attacking or defending. Keep it easy to understand, like you're teaching a friend.`;
 
   const res = await fetch(GEMINI_API_URL, {
     method: 'POST',

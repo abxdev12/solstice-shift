@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-sc-black: #0a0a0a;
-  --color-sc-white: #fefefe;
-  --color-sc-gray: #e5e5e5;
-  --color-sc-muted: #a3a3a3;
-  --color-sc-charcoal: #1a1a1a;
+  --color-sc-bg: #050505;
+  --color-sc-surface: #0a0a0a;
+  --color-sc-card: #111111;
+  --color-sc-border: #1a1a1a;
+  --color-sc-border-light: #222222;
+  --color-sc-text: #ffffff;
+  --color-sc-muted: #888888;
+  --color-sc-subtle: #555555;
+  --color-sc-gold: #f59e0b;
+  --color-sc-gold-dim: #a16207;
+  --color-sc-gemini: #4285f4;
 
-  --font-sans: Geist, Inter, Helvetica, Arial, sans-serif;
-  --font-mono: "Fira Code", "Cascadia Code", "JetBrains Mono", monospace;
-
-  --tracking-wide-upper: 0.08em;
-  --tracking-xwide: 0.15em;
-  --tracking-xxwide: 0.2em;
+  --font-sans: Geist, Inter, "SF Pro Display", Helvetica, Arial, sans-serif;
+  --font-mono: "Fira Code", "JetBrains Mono", monospace;
 }
 
 @layer base {
@@ -21,51 +23,41 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 
   h1 {
     font-family: var(--font-sans);
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: var(--tracking-xwide);
-    color: var(--color-sc-black);
+    letter-spacing: 0.02em;
+    color: var(--color-sc-text);
   }
 
   h2, h3, h4, h5, h6 {
     font-family: var(--font-sans);
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: var(--tracking-wide-upper);
-    color: var(--color-sc-black);
+    letter-spacing: 0.04em;
+    color: var(--color-sc-text);
   }
 
   body {
-    background: var(--color-sc-white);
-    color: var(--color-sc-black);
+    background: var(--color-sc-bg);
+    color: var(--color-sc-text);
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
   }
 
   ::selection {
-    background: var(--color-sc-black);
-    color: var(--color-sc-white);
+    background: var(--color-sc-gold);
+    color: var(--color-sc-bg);
   }
 
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: transparent; }
-  ::-webkit-scrollbar-thumb { background: #d4d4d4; border-radius: 2px; }
-  ::-webkit-scrollbar-thumb:hover { background: var(--color-sc-black); }
+  ::-webkit-scrollbar-thumb { background: #222; border-radius: 2px; }
+  ::-webkit-scrollbar-thumb:hover { background: #444; }
 
   button:not(:disabled) { cursor: pointer; }
-
-  input::placeholder { color: #d4d4d4; }
-}
-
-@utility uppercase-heading {
-  font-family: var(--font-sans);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-wide-upper);
+  input::placeholder { color: #444; }
 }

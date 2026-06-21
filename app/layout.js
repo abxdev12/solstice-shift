@@ -10,16 +10,15 @@ const geist = Geist({
 
 export const metadata = {
   title: 'Solstice Chess',
-  description:
-    'A premium AI-powered chess experience — where light and dark strategies collide.',
+  description: 'A premium AI-powered chess experience.',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geist.className} h-full`} data-scroll-behavior="smooth">
-      <body className="flex min-h-full flex-col bg-white text-black antialiased">
+    <html lang="en" className={`${geist.className} h-full`}>
+      <body className="flex min-h-full flex-col bg-[#050505] text-white antialiased">
         <Navbar />
-        <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-6 py-10 sm:px-8 sm:py-14">
+        <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-10">
           {children}
         </main>
         <Footer />

@@ -16,21 +16,13 @@ export default function Card({
     <motion.div
       whileHover={!isLocked ? { y: -3 } : undefined}
       onClick={!isLocked ? onClick : undefined}
-      className={`border border-black/10 bg-white p-6 transition-shadow hover:shadow-md ${
-        isLocked ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
+      className={`rounded-xl border border-white/[0.06] bg-[#111] p-6 transition-all ${
+        isLocked ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:border-white/[0.12] hover:shadow-lg hover:shadow-black/30'
       } ${className}`}
     >
-      {title && (
-        <h3 className="mb-1 text-xs font-bold uppercase tracking-[0.12em]">
-          {title}
-        </h3>
-      )}
-      {subtitle && (
-        <p className="mb-3 text-[10px] uppercase tracking-[0.12em] text-neutral-500">
-          {subtitle}
-        </p>
-      )}
-      {children && <div className="text-sm leading-relaxed">{children}</div>}
+      {title && <h3 className="mb-1 text-xs font-bold uppercase tracking-[0.08em] text-white">{title}</h3>}
+      {subtitle && <p className="mb-3 text-[10px] uppercase tracking-[0.08em] text-white/40">{subtitle}</p>}
+      {children && <div className="text-sm leading-relaxed text-white/70">{children}</div>}
     </motion.div>
   );
 }

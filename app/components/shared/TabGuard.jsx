@@ -8,7 +8,6 @@ import Link from 'next/link';
 
 export default function TabGuard({ children }) {
   const isPlayLocked = useAppStore((s) => s.isPlayLocked);
-
   if (!isPlayLocked) return <>{children}</>;
 
   return (
@@ -23,12 +22,10 @@ export default function TabGuard({ children }) {
         transition={{ type: 'spring', stiffness: 200, delay: 0.1 }}
         className="text-5xl"
       >
-        ♟
+        ♞
       </motion.span>
-      <h2 className="text-lg font-bold uppercase tracking-[0.15em]">Locked</h2>
-      <p className="max-w-md text-sm leading-relaxed text-neutral-500">
-        {LOCK_MESSAGE}
-      </p>
+      <h2 className="text-lg font-bold uppercase tracking-[0.08em] text-white">Locked</h2>
+      <p className="max-w-md text-sm leading-relaxed text-white/50">{LOCK_MESSAGE}</p>
       <Link href="/api">
         <Button variant="primary">Go to API Settings</Button>
       </Link>
